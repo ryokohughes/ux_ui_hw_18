@@ -19,8 +19,14 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5 {font-weight: 400; line-height: 1.3em;}
+img {max-width: 100%;}
+h1, h2, h3, h4, h5 {margin: 0 0 20px; font-weight: 400; line-height: 1.3em;}
+h2 {font-size: 42px; font-weight: 600;}
+h3 {margin-bottom: 30px; font-size: 34px; font-weight: 500; text-align: center;}
+h5 {margin: 5px 0 10px; font-size: 18px; font-weight: 600; text-transform: uppercase;}
 ul li, dl, li, p {margin: 0 0 10px; font-size: 16px; font-weight: 300; color: #464849;}
+dl dt {font-weight: 500;}
+dl dd {margin: 0 0 10px; line-height: 1.4;}
 a, a:link, a:visited, a:active {color: #0288b9; text-decoration: none; transition: all .5s ease;}
 a:hover {color: #0178a4; text-decoration: none;}
 
@@ -146,11 +152,17 @@ CONTENT
 
 .index-content .container {flex-flow: row wrap;}
 .content .container {flex-flow: column nowrap;}
+.bottom-border {padding-bottom: 40px; margin-bottom: 40px; border-bottom: solid 3px #eeeeee;}
+.row, .col {display: flex; flex-direction: row;}
+.row .col {padding-left: 15px; padding-right: 15px; flex-direction: column;}
+.row .col .port-image {display: block; margin: 0 0 10px; border: solid 1px rgba(0,0,0,.05);}
+.port-item h5 {margin: 0 0 0 5px; font-size: 14px; font-weight: 600;}
 
 .port-thumb {
 	display: flex;
-	margin: 5px;
+	margin: 20px 5px;
 	width: calc(50% - 10px);
+	flex-direction: column;
 }
 
 .port-thumb * {display: inherit; flex-direction: inherit;}
@@ -161,7 +173,8 @@ CONTENT
 	align-items: center;
 	width: 100%;
 	height: auto;
-	padding: 30px;
+	margin: 0 0 5px;
+	padding: 0;
 	background: #e6e6e6;
 }
 
@@ -173,6 +186,42 @@ CONTENT
 	height: auto;
 }
 
+.port-thumb .port-thumb-desc {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.port-overview h5 {margin-top: 10px;}
+.port-overview dl {padding-right: 10%;}
+.thumb-bg {background: #f6f6f6;}
+.row .col .thumb-bg img {margin-bottom: 0; border: none;}
+.thumb-bg.tabbit {background: #ddc1e2;}
+
+.btn-right {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.btn-right p {margin: 0;}
+
+a.icon-button {
+	display: flex;
+	flex: none;
+	align-items: center;
+	height: 40px;
+	margin: 0 15px 0 0;
+	padding: 0 20px;
+	background: #F6FBFC;
+	border-radius: 20px;
+	border: solid 1px #78CDD9;
+}
+
+a.icon-button:hover {background: #78CDD9; color: #fff;}
+.btn-icon-img {width: 28px; margin-right: 10px;}
+.btn-icon-text {margin: 0; font-size: 14px; font-weight: 500; text-transform: uppercase;}
 
 /* ------------------------------
 FOOTER
